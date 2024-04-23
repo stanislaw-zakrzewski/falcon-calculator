@@ -11,7 +11,7 @@ function App() {
 
     useEffect(() => {
         axios
-            .get('http://api.nbp.pl/api/exchangerates/tables/A')
+            .get('https://api.nbp.pl/api/exchangerates/tables/A')
             .then(function (response) {
                 // handle success
                 setExchangeRates(response.data[0].rates);
@@ -24,6 +24,7 @@ function App() {
     }, []);
 
     console.log(exchangeRates);
+    console.log(selectedCurrency);
 
     return (
         <>
